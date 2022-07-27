@@ -34,6 +34,7 @@ html {
 }
 body {
   font-family: var(--body-font);
+  overflow-x: hidden;
 }
 ::selection {
   background-color: var(--color-1);
@@ -82,9 +83,6 @@ a {
   text-decoration: none !important;
   color: var(--black);
 }
-a:hover {
-  color: var(--black);
-}
 ul {
   list-style-type: none;
   padding: 0;
@@ -117,18 +115,18 @@ hr {
 }
 .tag {
   display: inline-block;
-  border: 1px solid var(--primary-400);
+  border: 1px solid var(--color-2);
   border-radius: var(--border-radius);
-  color: var(--primary-400);
+  color: var(--color-2);
   margin-right: 1px;
   margin-bottom: .3em;
   padding: 2px 6px;
   font-weight: 500;
 }
-.button-one {
+.button {
   cursor: pointer;
-  color: var(--white);
-  background: var(--primary-400);
+  color: var(--black);
+  background: var(--color-2);
   border: transparent;
   border-radius: var(--border-radius);
   letter-spacing: var(--letter-spacing);
@@ -138,22 +136,22 @@ hr {
   text-transform: capitalize;
   display: inline-block;
 }
-.button-one a {
+.button a {
   color: var(--white);
 }
-.button-one:hover {
-  color: var(--primary-400);
+.button:hover {
+  color: var(--black);
   background: var(--white);
-  border: 1px solid var(--primary-400);
+  border: 1px solid var(--color-2);
   padding: 0.8rem 2rem;
   box-shadow: var(--shadow-4);
   transition: var(--transition);
 }
-.button-one:focus {
+.button:focus {
   outline: none;
 }
-.button-one:hover a {
-  color: var(--primary-400);
+.button:hover a {
+  color: var(--color-2);
 }
 .filter-form {
   max-width: none !important;
@@ -228,7 +226,7 @@ hr {
   height: 6rem;
   border: 5px solid var(--grey-500);
   border-radius: 50%;
-  border-top-color: var(--primary-400);
+  border-top-color: var(--color-2);
   animation: spinner 1s linear infinite;
   margin: 0 auto;
 }
@@ -334,6 +332,46 @@ hr {
     border-top: none;
     margin-left: 1rem;
   }
+}
+
+.landing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/landing.png);
+  width: 100vw;
+  height: 75vh;
+  background-size: cover;
+}
+.landing .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.landing .text h3 {
+  color: var(--white);
+  margin-bottom: 30px;
+  line-height: 2.5rem;
+}
+.landing .text p {
+  letter-spacing: 0.4rem;
+  margin-bottom: 55px;
+  color: var(--white);
+}
+
+.intro .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 160px 0px;
+}
+.intro p {
+  margin-top: 50px;
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 .footer-section {
