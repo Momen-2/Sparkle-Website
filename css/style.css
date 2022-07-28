@@ -267,10 +267,16 @@ hr {
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: fixed;
+  transition: var(--transition);
+}
+.navbar.active {
   background-color: var(--background-color);
+  transition: var(--transition);
+  height: 5rem;
 }
 .navbar .container {
-  width: 75%;
+  width: 56%;
 }
 .nav-header {
   display: flex;
